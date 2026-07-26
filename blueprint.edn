@@ -1,0 +1,19 @@
+{:itonami.blueprint/id "cloud-itonami-crowdfunding-collection"
+ :itonami.blueprint/name "Rewards Crowdfunding — Deadline Collection and Drop-off"
+ :itonami.blueprint/domain :crowdfunding/collection
+ :itonami.blueprint/license "AGPL-3.0-or-later"
+ :itonami.blueprint/social-impact [:consumer-protection :transparency :audit]
+ :itonami.blueprint/governor :collection-governor
+ :itonami.blueprint/robotics false
+ :itonami.blueprint/required-technologies [:identity :audit-ledger :payments]
+ :itonami.blueprint/optional-technologies []
+ :itonami.blueprint/status :public-oss
+ :itonami.blueprint/maturity :implemented
+ :itonami.blueprint/keying :function
+ :itonami.blueprint/adr "2607268500-crowdfunding-itonami-capability-and-actors"
+ ;; This actor AUTHORISES charges; a rail performs them. It holds no funds
+ ;; and no keys. `:plan-collection` and `:finalize-collection` escalate in
+ ;; every phase including 3 — money moving, and the statement of what
+ ;; actually landed, both have named authors.
+ :itonami.blueprint/custodial false
+ :itonami.blueprint/adjudicating false}
