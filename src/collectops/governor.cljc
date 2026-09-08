@@ -49,7 +49,7 @@
       actually received and moves the campaign into fulfilment.
       `collectops.phase` keeps all three out of every phase's `:auto` set
       independently — two layers, not one."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [collectops.store :as store]
             [crowdfunding.collection :as collection]))
 
@@ -175,7 +175,7 @@
       :detail (str ":effect は :propose のみ許可されるが " (pr-str (:effect proposal)) " が提案された")}]))
 
 (defn- text-blob [proposal]
-  (str/lower-case (pr-str (select-keys proposal [:op :summary :rationale :cites]))))
+  (str/lower (pr-str (select-keys proposal [:op :summary :rationale :cites]))))
 
 (defn- scope-exclusion-violations [proposal]
   (let [op (:op proposal)
