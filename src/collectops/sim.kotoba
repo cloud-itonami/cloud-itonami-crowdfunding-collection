@@ -2,7 +2,7 @@
   "Offline demo: watch a still-live campaign refuse to be charged, watch
   one unpriceable pledge refuse the whole plan, charge with a human's
   approval, let a card fail and retry, and finalise with the drop-off
-  visible. `clojure -M:dev:run`."
+  visible. `kbb -M:dev:run`."
   (:require [collectops.operation :as operation]
             [collectops.store :as store]
             [langgraph.graph :as g]))

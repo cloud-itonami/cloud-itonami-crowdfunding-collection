@@ -64,9 +64,9 @@ a rail adapter performs the transfers afterwards, outside this actor.
 ## Run it
 
 ```bash
-clojure -M:dev:run     # offline demo: refusals, a human-approved charge run, retries, drop-off
-clojure -M:dev:test    # 25 tests
-clojure -M:lint
+kbb -M:dev:run     # offline demo: refusals, a human-approved charge run, retries, drop-off
+kbb -M:dev:test    # 25 tests
+kbb -M:lint
 ```
 
 ## Licence
